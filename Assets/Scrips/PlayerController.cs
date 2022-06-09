@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    float MovementSpeed = 0.1f;
-    float RotationSpeed = 4;
+    public float MovementSpeed = 0.1f;
+    public float RotationSpeed = 4;
     public float jumpForce = 5;
     public int maxJumps = 2;
 
@@ -22,11 +22,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(0, 0, MovementSpeed);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(0, 0, -MovementSpeed);
         }

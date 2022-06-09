@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerColision : MonoBehaviour
 {
+    public Vector3 posInicio;
 
     // Start is called before the first frame update
     void Start()
     {
+        posInicio = transform.position;
     }
 
     // Update is called once per frame
@@ -21,11 +23,11 @@ public class PlayerColision : MonoBehaviour
     {
         if (collision.gameObject.name == "Obstaculo")
         {
-            transform.position = new Vector3(0, 1, 0);
+            transform.position = posInicio;
         }
         if (collision.gameObject.name == "DeathFloor")
         {
-            transform.position = new Vector3(0, 1, 0);
+            transform.position = new Vector3(-29, 2.2f, 26.2f);
         }
         if (collision.gameObject.name == "Meta")
         {
